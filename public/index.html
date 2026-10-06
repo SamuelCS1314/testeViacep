@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cartaoFormulario {
+            border: solid black 1px;
+            max-width: 50%;
+            padding: 10px;
+            display: grid;
+            grid-template-areas:
+            ;
+        }
+
+        #cabecalhoFormulario {}
+
+        .campo {
+            border: solid black 1px;
+            max-width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="cartaoFormulario">
+        <section id="cabecalhoFormulario">
+            <h1>Endereço</h1>
+        </section>
+        <form action="">
+            <div id="labels">
+                <label for="CEP">CEP:</label>
+                <label for="logradouro">Endereço:</label>
+                <label for="complemento">Complemento:</label>
+                <label for="unidade">Número:</label>
+                <label for="bairro">Bairro:</label>
+                <label for="localidade">Cidade:</label>
+                <label for="uf">UF:</label>
+                <label for="estado">Estado:</label>
+            </div>
+            <div id="inputs">
+                <input id="CEP" type="text" class="campo" maxlength="9" placeholder="00000-000" onchange="buscarCEP()">
+                <div class="campo"><span id="logradouro"> </span></div>
+                <input type="text" class="campo">
+                <input type="number" class="campo">
+                <div class="campo"><span id="bairro"> </span></div>
+                <div class="campo"><span id="uf"> </span></div>
+                <div class="campo"><span id="localidade"> </span></div>
+                <div class="campo"><span id="estado"> </span></div>
+            </div>
+
+        </form>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
