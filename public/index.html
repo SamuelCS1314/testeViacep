@@ -11,10 +11,21 @@
             max-width: 50%;
             padding: 10px;
             display: grid;
-            grid-template-areas:
-            ;
         }
 
+        #sectionInfoPessoal {
+        	display: grid;
+            grid-template-columns: auto auto;
+        }
+        
+		#sectionEndereco{
+        	display: grid;
+            grid-template-columns: auto auto;   
+        }
+
+        span{
+            width: 900px;
+        }
         #cabecalhoFormulario {}
 
         .campo {
@@ -26,34 +37,46 @@
 
 <body>
     <section id="cartaoFormulario">
-        <section id="cabecalhoFormulario">
-            <h1>Endereço</h1>
-        </section>
         <form action="">
+        <section id="sectionInfoPessoal">
             <div id="labels">
-                <label for="CEP">CEP:</label>
-                <label for="logradouro">Endereço:</label>
-                <label for="complemento">Complemento:</label>
-                <label for="unidade">Número:</label>
-                <label for="bairro">Bairro:</label>
-                <label for="localidade">Cidade:</label>
-                <label for="uf">UF:</label>
-                <label for="estado">Estado:</label>
+                <label for="nome">Nome:</label><br>
+                <label for="CPF">CPF:</label><br>
+                <label for="email">E-mail:</label><br>
+                <label for="telefone">Telefone:</label><br>
+            </div>
+            <div id="inputs">
+                <input type="text" name="" id="nome" placeholder="Nome Completo"><br>
+                <input type="text" name="" id="CPF"><br>
+                <input type="text" name="" id="email"><br>
+                <input type="number" name="" id="telefone">
+            </div>
+        </section>
+        <section id="sectionEndereco">           
+            <div id="labels">
+                <label for="CEP">CEP:</label> <br>
+                <label for="logradouro">Endereço:</label><br>
+                <label for="unidade">Número:</label><br>
+                <label for="complemento">Complemento:</label><br>
+                <label for="bairro">Bairro:</label><br>
+                <label for="localidade">Cidade:</label><br>
+                <label for="uf">UF:</label><br>
+                <label for="estado">Estado:</label><br>
             </div>
             <div id="inputs">
                 <input id="CEP" type="text" class="campo" maxlength="9" placeholder="00000-000" onchange="buscarCEP()">
-                <div class="campo"><span id="logradouro"> </span></div>
-                <input type="text" class="campo">
-                <input type="number" class="campo">
-                <div class="campo"><span id="bairro"> </span></div>
-                <div class="campo"><span id="uf"> </span></div>
-                <div class="campo"><span id="localidade"> </span></div>
-                <div class="campo"><span id="estado"> </span></div>
+                <div class="campo"><span id="logradouro">logradouro </span></div>
+                <input type="number" id="unidade"   class="campo"><br>
+                <input type="text"   id="complemento"    class="campo">
+                <div class="campo"><span id="bairro">bairro </span></div>
+                <div class="campo"><span id="uf">UF</span></div>
+                <div class="campo"><span id="localidade">localidade </span></div>
+                <div class="campo"><span id="estado">estado</span></div>
             </div>
-
+        </section>
+        <div onclick="enviarForm()">TESTE</div>
         </form>
     </section>
     <script src="index.js"></script>
 </body>
-
 </html>

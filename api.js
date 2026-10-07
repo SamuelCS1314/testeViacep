@@ -12,4 +12,20 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'index.html'));
 });
 
+app.post('api/uploads/usuarios', async (req, res) =>{
+    try {
+        const { CPF, nome, telefone, email, CEP, complemento, unidade } = req.body;
+
+        const query = 'INSERT IGNORE INTO usuarios (CPF, nome, telefone, email, CEP, complemento, unidade) VALUE (?,?,?,?,?,?,?)'
+    }
+})
+
+
+
+
+
+
+
+
+
 app.listen(PORT, () => console.log(`rodando ${PORT}`)); 

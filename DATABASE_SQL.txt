@@ -1,0 +1,22 @@
+CREATE DATABASE TesteViacep;
+
+CREATE TABLE usuarios (
+	CPF VARCHAR(11) PRIMARY KEY,
+	nome VARCHAR(100),
+	telefone VARCHAR(11),
+	email VARCHAR(30),
+	CEP VARCHAR(8) FOREIGN KEY,
+	complemento VARCHAR(20),
+	unidade INT
+);
+
+CREATE TABLE usuarios (
+    CPF VARCHAR(11) PRIMARY KEY,
+    nome VARCHAR(100),
+    telefone VARCHAR(11),
+    email VARCHAR(100),
+    CEP VARCHAR(8), -- Coluna adicionada aqui
+    complemento VARCHAR(20),
+    unidade INT,
+    FOREIGN KEY (CEP) REFERENCES enderecos(CEP)
+);
