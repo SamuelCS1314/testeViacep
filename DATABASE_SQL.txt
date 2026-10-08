@@ -1,13 +1,17 @@
 CREATE DATABASE TesteViacep;
 
-CREATE TABLE usuarios (
-	CPF VARCHAR(11) PRIMARY KEY,
-	nome VARCHAR(100),
-	telefone VARCHAR(11),
-	email VARCHAR(30),
-	CEP VARCHAR(8) FOREIGN KEY,
-	complemento VARCHAR(20),
-	unidade INT
+CREATE TABLE enderecos (
+CEP varchar(9) PRIMARY KEY,
+logradouro	varchar(100),
+bairro	varchar(30),
+localidade	varchar(40),
+uf	char(2),
+estado	varchar(20),
+regiao	varchar(12),
+ibge	int(11),
+gia	int(11),
+DDD	int(11),
+siafi	int(11)	
 );
 
 CREATE TABLE usuarios (

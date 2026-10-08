@@ -4,8 +4,10 @@ const db = mysql.createPool({
     host: 'localhost',
     port: 3306,
     user: 'root',
-    database: 'testeviacep',
+    database: 'teste_viacep',
     waitForConnections: true,
     connectLimit: 10,
     queueLimit: 0
 });
+
+export default db;
